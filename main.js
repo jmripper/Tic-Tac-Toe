@@ -4,13 +4,24 @@ const gridContainer = document.getElementById("grid-container")
 const gridItemList = gridContainer.querySelectorAll(".grid-item")
 //grab the color background within grid-item
 const gridItemColorList = gridContainer.querySelectorAll(".background-color")
+//player one
+const playerOne = 1;
+const playerTwo = 0
 
 
 gridItemColorList.forEach((gridItem => {
+    gridItem.style.backgroundColor = '';
 
     gridItem.addEventListener("click", evt => {
         evt.preventDefault();
-        gridItem.style.backgroundColor = "lightblue";
+        //gridItem.style.backgroundColor = "red";
+        //randomNum();
+        if (player === 0) {
+            return gridItem.style.backgroundColor = "lightblue";
+        }
+        else {
+            return gridItem.style.backgroundColor = "red";
+        }
+        }
     })
-    //console.log(gridItem)
 }))
