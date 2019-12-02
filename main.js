@@ -16,6 +16,7 @@ gridItemColorList.forEach((gridItem => {
             //console.log(playerTurn)
             if (playerTurn % 2 == 1) {
                 gridItem.style.backgroundColor = "lightblue", playerTurn++,
+                gridItem.style.color = "black";
                 gridItem.style.pointerEvents = "none";
                 setH3.innerHTML = "Player 1: Blue";
                 gridItem.innerHTML = "X"
@@ -25,6 +26,7 @@ gridItemColorList.forEach((gridItem => {
                 gridItem.style.backgroundColor = "red", playerTurn++,
                 gridItem.style.pointerEvents = "none";
                 setH3.innerHTML = "Player 2: Red";
+                gridItem.style.color = "black";
                 gridItem.innerHTML = "O"
                 checkWinner();
             }
