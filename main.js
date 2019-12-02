@@ -2,6 +2,7 @@
 const gridContainer = document.getElementById("grid-container")
 //grab the color background within grid-item
 const gridItemColorList = gridContainer.querySelectorAll(".background-color")
+const setH3 = document.querySelector("h3")
 let playerTurn = 1;
 
 function playGame() {
@@ -13,10 +14,12 @@ gridItemColorList.forEach((gridItem => {
             if (playerTurn % 2 == 1) {
                 gridItem.style.backgroundColor = "lightblue", playerTurn++,
                 gridItem.style.pointerEvents = "none";
+                setH3.innerHTML = "Player 1: Blue";
             }
             else if (playerTurn % 2 !== 1) {
                 gridItem.style.backgroundColor = "red", playerTurn++,
                 gridItem.style.pointerEvents = "none";
+                setH3.innerHTML = "Player 2: Red";
             }
          })
     }));
