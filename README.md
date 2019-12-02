@@ -2,5 +2,9 @@
 
 Make the game Tic-Tac-Toe using HTML, CSS, and JavaScript!
 
-### Languages
+## Languages Used:
+- HTML
+- CSS
+- Vanilla Javascript
+
 
