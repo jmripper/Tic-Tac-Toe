@@ -43,5 +43,6 @@ h2 {
 }
 
 button {
-    margin: 1rem 2em;
+    margin: 0 auto;
+    padding: 10px 20px;
 }

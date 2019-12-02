@@ -22,3 +22,12 @@ gridItemColorList.forEach((gridItem => {
     }));
 }
 playGame();
+
+const resetButton = document.getElementById("resetButton")
+
+resetButton.addEventListener("click", evt => {
+    gridItemColorList.forEach((gridItem => { 
+        gridItem.style.backgroundColor = ''; 
+        playerTurn == 1;
+    }))
+})
