@@ -21,7 +21,7 @@ h2 {
     padding: 1em;
 }
 
-.grid-container {
+#grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     grid-gap: 0;
@@ -31,4 +31,14 @@ h2 {
 .grid-item {
     border: 1px solid #000;
     height: 180px;
+    padding: 1.2rem;
+}
+
+.background-color {
+    margin: 0;
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    border-radius: 1rem;
+
 }
