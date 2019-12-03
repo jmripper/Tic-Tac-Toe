@@ -18,7 +18,7 @@ h2 {
     height: auto;
     display: block;
     margin: 0 auto;
-    padding: 1em;
+    padding: 2em 1em;
 }
 
 #grid-container {
@@ -29,7 +29,6 @@ h2 {
 }
 
 .grid-item {
-    border: 1px solid #000;
     height: 180px;
     padding: 1.2rem;
 }
@@ -50,4 +49,17 @@ h2 {
 button {
     margin: 0 auto;
     padding: 10px 20px;
+}
+
+.border-right-bottom {
+    border-right: 2px solid #000000;
+    border-bottom: 2px solid #000000;
+}
+
+.border-bottom {
+    border-bottom: 2px solid #000000;
+}
+
+.border-right {
+    border-right: 2px solid #000000;
 }
