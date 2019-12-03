@@ -40,7 +40,8 @@ playGame();
 resetButton.addEventListener("click",evt => {
     evt.preventDefault()
     gridItemColorList.forEach((gridItem => { 
-        gridItem.style.backgroundColor = ''; 
+        gridItem.style.backgroundColor = '';
+        gridItem.style.color = "transparent", 
         playerTurn == 1;
         setH3.innerHTML = '' 
     }))
