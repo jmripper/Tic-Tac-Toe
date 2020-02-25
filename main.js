@@ -66,7 +66,7 @@ let turn = "X";
 
 let win;
 
-const squares = Array.from(document.querySelectorAll("#board div"));
+const squares = Array.from(document.querySelectorAll("#board li"));
 
 const elementBoard = document.querySelector("#board");
 
