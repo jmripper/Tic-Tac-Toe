@@ -36,14 +36,13 @@
 // }
 // playGame();
 
-
 // resetButton.addEventListener("click",evt => {
 //     evt.preventDefault()
-//     gridItemColorList.forEach((gridItem => { 
+//     gridItemColorList.forEach((gridItem => {
 //         gridItem.style.backgroundColor = '';
-//         gridItem.style.color = "transparent", 
+//         gridItem.style.color = "transparent",
 //         playerTurn == 1;
-//         setH3.innerHTML = '' 
+//         setH3.innerHTML = ''
 //     }))
 
 // })
@@ -63,85 +62,88 @@
 
 let board;
 
-let turn = 'X'
+let turn = "X";
 
 let win;
 
-const squares = Array.from(document.querySelectorAll('#board div'))
+const squares = Array.from(document.querySelectorAll("#board div"));
 
-const elementBoard = document.querySelector('#board')
+const elementBoard = document.querySelector("#board");
 
-const resetButton = document.getElementById("resetButton")
+const resetButton = document.getElementById("resetButton");
 
-const h3Text = document.querySelector("h3")
+const h3Text = document.querySelector("h3");
 
 const winningCombos = [
-    [0, 1, 2],
-    [3, 4, 5],
-    [6, 7, 8],
-    [0, 3, 6],
-    [1, 4, 7],
-    [2, 5, 8],
-    [0, 4, 8],
-    [2, 4, 6]
+  [0, 1, 2],
+  [3, 4, 5],
+  [6, 7, 8],
+  [0, 3, 6],
+  [1, 4, 7],
+  [2, 5, 8],
+  [0, 4, 8],
+  [2, 4, 6]
 ];
-
 
 /*----- functions -----*/
 
 function game() {
+  board = ["", "", "", "", "", "", "", "", ""];
 
-    board = [
-        '', '', '',
-        '', '', '',
-        '', '', ''
-    ];
-
-    render();
+  render();
 }
 
 game();
 
 function render() {
-    board.forEach((mark, i) => {
-        squares[i].textContent = mark  
-    });
+  board.forEach((mark, i) => {
+    squares[i].textContent = mark;
+  });
 
-    h3Text.innerHTML = win === 'T' ? `Dang that's a tie.`: win ? `${win} wins the game!` : `It's ${turn}'s turn.`;
+  h3Text.innerHTML =
+    win === "T"
+      ? `Dang that's a tie.`
+      : win
+      ? `${win} wins the game!`
+      : `It's ${turn}'s turn.`;
 }
 
 elementBoard.addEventListener("click", evt => {
-    //console.log("square clicked")
-    let squareID = squares.findIndex((square) => {
-        return square === evt.target;
-    });
+  //console.log("square clicked")
+  let squareID = squares.findIndex(square => {
+    return square === evt.target;
+  });
 
-    board[squareID] = turn;
+  board[squareID] = turn;
 
-    win = getWinner();
+  win = getWinner();
 
-    if (turn === 'X') {
-        turn = 'O'
-    } else {
-        turn ='X'
-    }
-    
-    render();
-})
+  if (turn === "X") {
+    turn = "O";
+  } else {
+    turn = "X";
+  }
+
+  render();
+});
 
 function getWinner() {
-    let winner = null;
+  let winner = null;
 
-    winningCombos.forEach((combo, i) => {
-        if (board[combo[0]] && board[combo[0]] === board[combo[1]] && board[combo[0]] === board[combo[2]]) {
-            winner = board[combo[0]];
-        }
-        console.log(winner)
-    });
+  winningCombos.forEach((combo, i) => {
+    if (
+      board[combo[0]] &&
+      board[combo[0]] === board[combo[1]] &&
+      board[combo[0]] === board[combo[2]]
+    ) {
+      winner = board[combo[0]];
+    }
+    console.log(winner);
+  });
 
-    return winner ? winner : board.includes('') ? null : 'T';
+  return winner ? winner : board.includes("") ? null : "T";
 }
 
 resetButton.addEventListener("click", evt => {
-    game();
-})
+  game();
+});

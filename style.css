@@ -17,7 +17,7 @@ h2 {
 .container {
     width: 100%;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 1rem 1.5rem;
     display: flex;
     flex-flow: column;
     justify-content: center;
@@ -37,10 +37,28 @@ h2 {
     border: 2px solid rgba(0, 0, 0, .75);
     height: 140px;
     width: 140px;
-    margin: auto;
+    margin: 0 auto;
+    font-size: 120px;
+    text-align: center;
+    border-radius: 10px;
 }
 
 button {
     margin: 0 auto;
-    padding: 10px 20px;
+    padding: 15px 20px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+#resetButton {
+    border-radius: 10px;
+    background-color: blue;
+    color: #ffffff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+#resetButton:hover {
+    background-color: rgb(57, 3, 207);
 }
