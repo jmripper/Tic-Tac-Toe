@@ -61,19 +61,16 @@
 /*----- variables -----*/
 
 let board;
-
+let user = "X"
+let ai = "0"
 let turn = "X";
-
 let win;
 
 const squares = Array.from(document.querySelectorAll("#board li"));
-
 const elementBoard = document.querySelector("#board");
-
 const resetButton = document.getElementById("resetButton");
-
 const h3Text = document.querySelector("h3");
-
+const cell = document.querySelectorAll(".square");
 const winningCombos = [
   [0, 1, 2],
   [3, 4, 5],
