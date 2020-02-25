@@ -43,7 +43,7 @@ body {
 .container {
     width: 100%;
     margin: 0 auto;
-    padding: 15px 10px;
+    padding: 15px 10px 35px;
     display: flex;
     flex-flow: column;
     justify-content: center;
@@ -52,29 +52,36 @@ body {
 
 .square-container {
     list-style: none;
-    /* flex-flow: wrap;
-    align-items: center;
-    justify-content: center; */
-    height: 340px;
-    max-height: 440px;
+    height: 300px;
     width: 100%;
-    max-width: 440px;
     position: relative;
     margin: 0;
     padding: 0;
 }
 
 .square {
-    border: 2px solid rgba(0, 0, 0, .75);
     max-height: 140px;
-    height: 32%;
-    width: 32%;
+    width: 33.33%;
+    height: 33.33%;
     margin: 0;
-    font-size: 120px;
+    font-size: 70px;
     text-align: center;
-    border-radius: 10px;
     position: relative;
     float: left;
+    padding:10px
+}
+
+.one {
+    border-right: 2px solid rgba(0, 0, 0, .75);
+    border-bottom: 2px solid rgba(0, 0, 0, .75);
+}
+
+.two {
+    border-bottom: 2px solid rgba(0, 0, 0, .75);
+}
+
+.three {
+    border-right: 2px solid rgba(0, 0, 0, .75);
 }
 
 button {
@@ -95,4 +102,10 @@ button {
 
 #resetButton:hover {
     background-color: rgb(57, 3, 207);
+}
+
+@media (min-width: 375px) {
+    .square {
+        height: 32%;
+    }
 }
